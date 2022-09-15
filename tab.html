@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/font-awesome.min.css">
+    <style>
+        .con{
+            padding: 20px;
+            margin: 20px;
+            border-radius: 7px;
+            box-shadow: 1px 2px 3px black;
+        }
+    </style>
+    <script>
+        function checkrep(){
+            let k = document.getElementById('rep').value;
+            let p = document.getElementById('pass').value;
+            if(k !=p){
+                alert("Password Mismatch: please check");
+                document.getElementById("rep").value="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sign">Signup</a></li>
+        <li><a data-toggle="tab" href="#log">Login</a></li>
+        <li><a data-toggle="tab" href="#forg">Forget Password</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="sign" class="tab-pane fade in active">
+            <h1>Signup Content</h1>
+            <div style="max-width:450px; margin:auto;">
+                <form action="post">
+                    <div class="form-group">
+                     <input class="form-control" type="text" placeholder="UserName" required />
+                    </div>
+                    <div class="form-group">
+                     <input class="form-control" type="email" placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                     <input class="form-control" type="password" placeholder="Password" required id="pass" />
+                    </div>
+                    <div class="form-group">
+                     <input class="form-control" type="password" placeholder="Repeat Password" id="rep"  required onblur="checkrep()" />
+                    </div>
+                    <div class="form-group">
+                     <input type="submit" value="Register" class="btn btn-dark" />
+                    </div>
+                </form>
+
+            </div>
+            </div>
+            <div id="log" class="tab-pane fade">
+                <p>Login Content</p>
+            </div>
+            <div id="forg" class="tab-pane fade">
+               <p>Forget content</p>
+            </div>
+
+    </div>
+ 
+    
+
+    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
